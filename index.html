@@ -8,7 +8,7 @@
     function profileActivation(profile, reason) {
         if (profile.active) {
           if (!reason) {
-            return "Confirm Status Manually"
+            return "confirm status manually"
           }
           profile.active = false;
           profile.reason = reason;
@@ -69,7 +69,7 @@
       for (const word of words) {
         const cleanedWord = word.replace(/[.,!?;:"'()]/g, '');
 
-        if (forbidden.includes(cleanedWord.toLowerCse())) {
+        if (forbidden.includes(cleanedWord.toLowerCase())) {
           const scrubbedWord = 'x'.repeat(cleanedWord.length);
 
           const originalWordWithPunctuation = word.replace(cleanedWord, scrubbedWord)
